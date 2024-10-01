@@ -10,14 +10,11 @@
     background-repeat: no-repeat;
     background-size: cover;
 }
-/*helping background*/
-.navbar{
-    background-color: aquamarin
-}
 /*Header*/
 /*navbarlogo*/
 .navbarlogo{
     display: grid;
+    position: relative;
     grid-template-columns: 3fr 1fr;
     justify-items: center;
     align-items: center;
@@ -25,16 +22,14 @@
 .logo{
     height: 50%;
     width: 15%;
-}
-img{
-    width: 100%;
-    height: 100%;
+    position: absolute;
+    left: 150px;
 }
 .headerbox {
     display: grid;
     grid-template-columns: 2fr 3fr;
     width: 100%;
-    height: 10vh;
+    height: auto;
     border-bottom: 1px solid gray;
     background-color: white;
 }
@@ -66,10 +61,11 @@ header li:nth-last-child(2){
 }
 header li:nth-last-child(1){
     border: 2px solid gray;
-    padding: 20px 0 20px 0;
+    padding: 20px 0;
     border-radius: 50px;
     text-align: center;
     font-weight: 600;
+    width: auto;
 }
 /*main*/
 /*topbox*/
@@ -77,10 +73,17 @@ header li:nth-last-child(1){
     display: grid;
     grid-template-columns: 2fr 1fr;
     width: 100vw;
-    height: 300px;
-    padding-left: 150px;
-    justify-items: start;
+    height: 40vh;
     align-items: center;
+    background-image: url('topimg.jpg');
+}
+p,h1{
+    padding-left: 160px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+h1 {
+    width: 1000px;
+    height: auto;
 }
 .text{
     width: 50%;
@@ -93,18 +96,16 @@ header li:nth-last-child(1){
 }
 /*botbox*/
 .bot-box{
-    background-color: aliceblue;
-    height: 900px;
+    height: 60vh;
     width: 80vw;
-    align-content: center;
+    align-content: start;
     margin-left: 150px;
     display: grid;
 }
 /*botboxnavbar*/
 .topnavbar{
     display: grid;
-    padding-top: 0;
-    margin-top: 0;
+    margin-top: 40px;
 }
 .topnavbar ul{
     list-style-type: none;
@@ -124,16 +125,16 @@ header li:nth-last-child(1){
     text-align: center;
     border-radius: 20px;
 }
-.photobox{
+/*botboxcontainer*/
+.box-container{
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: 1fr 1fr;
-    column-gap: 10px;
-    row-gap: 30px;
-    height: 750px;
-    object-fit: contain;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 10px;
 }
-.photobox img {
-    width: 100%;
-    object-fit: contain;
+.box{
+    color: white;
+    font-size: 2rem;
+    padding: 0.5rem;
+    object-fit: fill;
 }
